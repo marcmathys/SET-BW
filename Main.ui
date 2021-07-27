@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>887</width>
+    <height>651</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SET User Interface</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="Sessions">
+      <item>
+       <widget class="QGroupBox" name="horizontalGroupBox">
+        <property name="title">
+         <string>Session I</string>
+        </property>
+        <layout class="QHBoxLayout" name="Session1">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QPushButton" name="S1R1">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Session I R1</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="S1R2">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Session I R2</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>0</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_3">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>10</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Start Stim I</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QFormLayout" name="formLayout">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>DT 1</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="DT1">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_2">
+               <property name="text">
+                <string>HT 1</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="HT1">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_3">
+               <property name="text">
+                <string>HTT 1</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLineEdit" name="HTT1">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="horizontalGroupBox_2">
+        <property name="title">
+         <string>Session II</string>
+        </property>
+        <layout class="QHBoxLayout" name="Session2">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QPushButton" name="S2R1">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Session II R1</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="S2R2">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Session II R2</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>0</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <spacer name="verticalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_4">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Start Stim II</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QFormLayout" name="formLayout_2">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_4">
+               <property name="text">
+                <string>DT 2</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="DT2">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_5">
+               <property name="text">
+                <string>HT 2</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="HT2">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_6">
+               <property name="text">
+                <string>HTT 2</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLineEdit" name="HTT2">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="Line" name="line_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="horizontalGroupBox_3">
+        <property name="title">
+         <string>Final Rating</string>
+        </property>
+        <layout class="QHBoxLayout" name="Final">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <widget class="QPushButton" name="S0R0">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Final Rate</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>0</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <spacer name="verticalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <layout class="QFormLayout" name="formLayout_3">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_7">
+               <property name="text">
+                <string>Final Sensitivity</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_8">
+               <property name="text">
+                <string>Final Pain</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_9">
+               <property name="text">
+                <string>Final Tolerance</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="FinalSens">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="FinalPain">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLineEdit" name="FinalTole">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>0</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="Table">
+      <property name="maximumSize">
+       <size>
+        <width>350</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustIgnored</enum>
+      </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>10</number>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>50</number>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>mA</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>S1R1</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>S1R2</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>S2R1</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>S2R1</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Final</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

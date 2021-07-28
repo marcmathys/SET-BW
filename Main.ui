@@ -88,7 +88,7 @@
             </spacer>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_3">
+            <widget class="QPushButton" name="Stim1Button">
              <property name="enabled">
               <bool>false</bool>
              </property>
@@ -281,7 +281,7 @@
             </spacer>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_4">
+            <widget class="QPushButton" name="Stim2Button">
              <property name="enabled">
               <bool>false</bool>
              </property>
@@ -469,7 +469,7 @@
              <item row="1" column="0">
               <widget class="QLabel" name="label_8">
                <property name="text">
-                <string>Final Pain</string>
+                <string>Final Pain Onset</string>
                </property>
               </widget>
              </item>

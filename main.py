@@ -3,7 +3,31 @@ import sys
 from functools import partial
 from operator import itemgetter
 
-import rating
+# import rating
+class rating:
+    @staticmethod
+    def rating(*_, **__): pass
+
+
+class StimWindow(QtWidgets.QWidget):
+    def __init__(self, parent, dt, ht, htt):
+        self.dt = dt
+        self.ht = ht
+        self.htt = htt
+        super().__init__(parent, QtCore.Qt.WindowType.Window)
+        uic.loadUi("Stim.ui", self)
+        self.stimButton = self.findChild(QtWidgets.QPushButton, "StimButton")
+        self.stimButton.clicked.connect(self.stim)
+        self.stopButton = self.findChild(QtWidgets.QPushButton, "StopButton")
+        self.stopButton.clicked.connect(self.stop)
+        self.findChild(QtWidgets.QLineEdit, "DT").setText(str(dt))
+        self.findChild(QtWidgets.QLineEdit, "HT").setText(str(ht))
+        self.findChild(QtWidgets.QLineEdit, "HTT").setText(str(htt))
+
+    def stim(self):
+        rating.rating(rateLevel=0, DT=self.dt, HT=self.ht, HTT=self.htt)
+
+    def stop(self): self.close()
 
 
 class RatingWindow(QtWidgets.QWidget):
@@ -41,7 +65,7 @@ class RatingWindow(QtWidgets.QWidget):
         global app
         app.processEvents()
         stim = int(self.stimLevel.text())
-        rating.main(rateLevel = stim)
+        rating.rating(rateLevel = stim)
         self.stimButton.setEnabled(True)
         self.stopButton.setEnabled(True)
         self.painLevel.setEnabled(True)
@@ -76,6 +100,8 @@ class RatingWindow(QtWidgets.QWidget):
 
 
 class MainWindow(QtWidgets.QMainWindow):
+    state = {}
+
     def __init__(self):
         super().__init__()
         self.sessionButtons = {}
@@ -87,9 +113,18 @@ class MainWindow(QtWidgets.QMainWindow):
             button.clicked.connect(partial(self.showRating, buttonName))
             self.sessionButtons[buttonName] = button
         self.table = self.findChild(QtWidgets.QTableWidget, "Table")
+        self.stim1 = self.findChild(QtWidgets.QPushButton, "Stim1Button")
+        self.stim1.clicked.connect(partial(self.showStim, 1))
+        self.stim2 = self.findChild(QtWidgets.QPushButton, "Stim2Button")
+        self.stim2.clicked.connect(partial(self.showStim, 2))
 
     def showRating(self, session):
         window = RatingWindow(self, session)
+        window.show()
+
+    def showStim(self, num):
+        [dt, ht, htt] = itemgetter("dt", "ht", "htt")(self.state[num])
+        window = StimWindow(self, dt, ht, htt)
         window.show()
 
     def ratingSuccess(self, rating):
@@ -114,9 +149,11 @@ class MainWindow(QtWidgets.QMainWindow):
             t = (t1 + t2) / 2
             ht = po + (t-po) * 0.5
             htt = po + (t-po) * 0.75
+            self.state[s] = {"dt": dt, "ht": ht, "htt": htt}
             self.findChild(QtWidgets.QLineEdit, "DT"+str(s)).setText(str(dt))
             self.findChild(QtWidgets.QLineEdit, "HT"+str(s)).setText(str(ht))
             self.findChild(QtWidgets.QLineEdit, "HTT"+str(s)).setText(str(htt))
+            self.findChild(QtWidgets.QPushButton, "Stim"+str(s)+"Button").setEnabled(True)
 
     def updateTable(self, rating):
         if self.table.rowCount() < rating.table.rowCount():

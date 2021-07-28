@@ -3,11 +3,7 @@ import sys
 from functools import partial
 from operator import itemgetter
 
-# import rating
-class rating:
-    @staticmethod
-    def rating(*_, **__): pass
-
+import rating
 
 class StimWindow(QtWidgets.QWidget):
     def __init__(self, parent, dt, ht, htt):

@@ -1,2 +1,2 @@
 # SET-Stim
-BW acive files
+BW active files
